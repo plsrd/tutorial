@@ -1,0 +1,34 @@
+.footerContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.platformContainer {
+  margin: 2rem 4rem;
+  height: 15vh;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.footerHeader {
+  font-weight: bold;
+  margin: 1rem 0;
+}
+
+.footerLink {
+  margin: .5rem 0;
+}
+
+.slackContainer {
+  margin: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footerDescription {
+  color: #515e72;
+  margin-bottom: 2rem;
+}
