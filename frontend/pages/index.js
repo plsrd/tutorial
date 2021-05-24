@@ -1,9 +1,11 @@
 import Head from 'next/head'
+import { sanityClient, urlFor } from '../sanity'
 import Image from 'next/image'
 import Link from 'next/link'
 import styles from '../styles/Home.module.css'
 
-export default function Home() {
+const Home = ({ sections }) => {
+  console.log(sections)
   return (
     <div className={styles.container}>
       <Head>
@@ -24,3 +26,32 @@ export default function Home() {
     </div>
   )
 }
+
+export const getServerSideProps = async () => {
+  const query = `*[_type == 'section']{
+    title, 
+    icon, 
+    slug, 
+    description, 
+    modules[]->{
+      title
+    }
+  }`
+  const sections = await sanityClient.fetch(query)
+
+  if (! sections) {
+    return {
+      props: {
+        sections: []
+      }
+    }
+  } else {
+    return {
+      props: {
+        sections
+      }
+    }
+  }
+}
+
+export default Home
