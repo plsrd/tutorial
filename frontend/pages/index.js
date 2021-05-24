@@ -7,6 +7,7 @@ import Link from 'next/link'
 import styles from '../styles/Home.module.css'
 
 import Nav from '../components/Nav'
+import Footer from '../components/Footer'
 
 const Home = () => {
   return (
@@ -14,7 +15,6 @@ const Home = () => {
       <Head>
         <title>Sanity Tutorial</title>
         <meta name="description" content="A beginner's guide to Sanity" />
-        <link rel="icon" type="image/svg+xml" href="/s.svg" />
       </Head>
       <Nav />
       <main>
@@ -22,10 +22,16 @@ const Home = () => {
           <h1 className={styles.mainHeading}>New to Sanity?</h1>
           <p className={styles.subheading}>Learn how to use the powerful unified content plaftorm here</p>
         </div>
+        <div className={styles.btnContainer}>
+          <Link href='/start'>
+            <a className={`${styles.startBtn} ${styles.btn}`}>Start Learning</a>
+          </Link>
+          <Link href='https://www.sanity.io/docs'>
+            <a className={`${styles.docsBtn} ${styles.btn}`}>Documentation</a>
+          </Link>
+        </div>
       </main>
-      <footer>
-        <p>footer</p>
-      </footer>
+      <Footer />
     </div>
   )
 }
