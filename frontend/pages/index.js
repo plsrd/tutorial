@@ -16,14 +16,13 @@ const Home = () => {
         <title>Sanity Tutorial</title>
         <meta name="description" content="A beginner's guide to Sanity" />
       </Head>
-      <Nav />
       <main>
         <div className={styles.headingContainer}>
           <h1 className={styles.mainHeading}>New to Sanity?</h1>
           <p className={styles.subheading}>Learn how to use the powerful unified content plaftorm here</p>
         </div>
         <div className={styles.btnContainer}>
-          <Link href='/start'>
+          <Link href='/learn'>
             <a className={`${styles.startBtn} ${styles.btn}`}>Start Learning</a>
           </Link>
           <Link href='https://www.sanity.io/docs'>
@@ -31,7 +30,6 @@ const Home = () => {
           </Link>
         </div>
       </main>
-      <Footer />
     </div>
   )
 }
