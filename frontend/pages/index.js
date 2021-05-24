@@ -4,6 +4,8 @@ import Image from 'next/image'
 import Link from 'next/link'
 import styles from '../styles/Home.module.css'
 
+import Nav from '../components/Nav'
+
 const Home = ({ sections }) => {
   console.log(sections)
   return (
@@ -13,13 +15,10 @@ const Home = ({ sections }) => {
         <meta name="description" content="A beginner's guide to Sanity" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
-      <nav>nav</nav>
-
+      <Nav />
       <main>
         <p>main</p>
       </main>
-
       <footer>
         <p>footer</p>
       </footer>
