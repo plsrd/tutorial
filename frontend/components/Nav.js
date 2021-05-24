@@ -6,7 +6,7 @@ const Nav = () => {
   return (
     <nav>
       <Link href='https://www.sanity.io/'>
-        <a><Image src='/../public/sanity.svg' height={30} width={100} /></a>
+        <a><Image src='/../public/sanity.svg' height={50} width={125} /></a>
       </Link>
       <div>
         <Link href='https://www.sanity.io/docs' >

@@ -13,7 +13,7 @@ const Home = ({ sections }) => {
       <Head>
         <title>Sanity 101</title>
         <meta name="description" content="A beginner's guide to Sanity" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" type="image/svg+xml" href="/s.svg" />
       </Head>
       <Nav />
       <main>
