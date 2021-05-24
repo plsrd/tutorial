@@ -5,7 +5,7 @@ import styles from '../styles/Nav.module.css'
 const Nav = () => {
   return (
     <nav>
-      <Link href='https://www.sanity.io/'>
+      <Link href='/'>
         <a><Image src='/sanity.svg' height={50} width={125} /></a>
       </Link>
       <div>
