@@ -39,3 +39,12 @@ footer {
   flex-direction: row;
   justify-content: space-around;
 }
+
+ul {
+  list-style: inside;
+}
+
+li {
+  margin: .5rem;
+  color: #515e72;
+}
