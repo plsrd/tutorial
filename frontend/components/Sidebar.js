@@ -1,21 +1,14 @@
- import { useState } from 'react'
+import Link from 'next/link'
  
  import styles from '../styles/Sidebar.module.css'
  
- const Sidebar = ({ sections, currentSection, handleClick }) => {
+ const Sidebar = ({ sections }) => {
   return (
     <div className={styles.sidebar}>
       {sections.map(section => (
-        <div key={section.title} onClick={() => handleClick(section.title)}> 
-          <p className={styles.sidebarTitle}>{section.title}</p>
-          {currentSection === section.title ? 
-            <ul>
-              {section.modules.map(module => <li key={module.title}>{module.title}</li>)}
-            </ul>
-            :
-            null
-          }
-        </div>
+        <Link href={`/learn/${section.slug.current}`} key={section.title}> 
+          <a className={styles.sidebarTitle}>{section.title}</a>
+        </Link>
       ))}
     </div>
   )

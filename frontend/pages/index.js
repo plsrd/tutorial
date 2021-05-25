@@ -16,7 +16,7 @@ const Home = () => {
           <p className={styles.subheading}>Learn how to use the powerful unified content plaftorm here</p>
         </div>
         <div className={styles.btnContainer}>
-          <Link href='/learn'>
+          <Link href='/learn/getting-started'>
             <a className={`${styles.startBtn} ${styles.btn}`}>Start Learning</a>
           </Link>
           <Link href='https://www.sanity.io/docs'>
