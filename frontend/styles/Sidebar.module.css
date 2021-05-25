@@ -1,11 +1,15 @@
 .sidebar {
-  border: 1px solid #cad1dc;
   height: 90%;
   width: 250px;
-  border-radius: 5px;
   padding: 2rem;
+  margin: 1rem auto 0 6rem;
 }
 
 .sidebarTitle {
-  font-weight: bold;
+  font-size: 1.2rem;
+  color: #515e72;
+}
+
+.module {
+  font-weight: 300;
 }

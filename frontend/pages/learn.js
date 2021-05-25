@@ -1,14 +1,25 @@
 import { sanityClient, urlFor } from '../sanity'
 import { useState } from 'react'
-import styled from '../styles/Learn.module.css'
+import styles from '../styles/Learn.module.css'
 
 import Sidebar from '../components/Sidebar'
  
  const Learn = ({ sections }) => {
+   const [currentSection, setCurrentSection] = useState(sections[0])
+
+   const handleClick = (newSection) => {
+     const section = sections.find(section => section.title === newSection)
+     setCurrentSection(section)
+   }
 
    return (
      <main> 
-       <Sidebar sections={sections} />
+       <Sidebar 
+        sections={sections} 
+        currentSection={currentSection.title}
+        handleClick={handleClick}
+      />
+       {/* <Section currentSection={currentSection} /> */}
      </ main>
    )
  }

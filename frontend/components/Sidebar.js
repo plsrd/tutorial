@@ -1,18 +1,20 @@
  import { useState } from 'react'
  
- import styled from '../styles/Sidebar.module.css'
+ import styles from '../styles/Sidebar.module.css'
  
- const Sidebar = ({ sections }) => {
+ const Sidebar = ({ sections, currentSection, handleClick }) => {
   return (
-    <div className={styled.sidebar}>
+    <div className={styles.sidebar}>
       {sections.map(section => (
-        <div key={section.title}> 
-          <p className={styled.sidebarTitle}>{section.title}</p>
-          <ul>
-            {section.modules.map(module => (
-              <li key={module.title}>{module.title}</li>
-            ))}
-          </ul>
+        <div key={section.title} onClick={() => handleClick(section.title)}> 
+          <p className={styles.sidebarTitle}>{section.title}</p>
+          {currentSection === section.title ? 
+            <ul>
+              {section.modules.map(module => <li key={module.title}>{module.title}</li>)}
+            </ul>
+            :
+            null
+          }
         </div>
       ))}
     </div>
