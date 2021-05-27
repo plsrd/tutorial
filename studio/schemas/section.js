@@ -24,7 +24,7 @@ export default {
       title: 'Slug',
       type: 'slug',
       options: {
-        source: doc => `section-${doc.title}`
+        source: 'title'
       },
       validation: Rule => Rule.required()
     },

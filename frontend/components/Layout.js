@@ -1,12 +1,11 @@
 import Sidebar from './Sidebar'
 
-const Layout = ({ children, sections}) => {
+const Layout = ({ children }) => {
 
   return (
     <main> 
-       <Sidebar sections={sections} />
+       <Sidebar />
        {children}
-
     </ main>
   )
 }
