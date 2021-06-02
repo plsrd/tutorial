@@ -17,17 +17,19 @@ const Home = ({ data }) => {
         <meta name="description" content="A beginner's guide to Sanity" />
       </Head>
       <Layout sections={sections}>
-        <div className={styles.headingContainer}>
-          <h1 className={styles.mainHeading}>New to Sanity?</h1>
-          <p className={styles.subheading}>Learn how to use the powerful unified content plaftorm here</p>
-        </div>
-        <div className={styles.btnContainer}>
-          <Link href='/getting-started'>
-            <a className={`${styles.startBtn} ${styles.btn}`}>Start Learning</a>
-          </Link>
-          <Link href='https://www.sanity.io/docs'>
-            <a className={`${styles.docsBtn} ${styles.btn}`}>Documentation</a>
-          </Link>
+        <div className={styles.contentContainer}>
+          <div className={styles.headingContainer}>
+            <h1 className={styles.mainHeading}>New to Sanity?</h1>
+            <p className={styles.subheading}>Learn how to use the powerful unified content plaftorm here</p>
+          </div>
+          <div className={styles.btnContainer}>
+            <Link href='/getting-started'>
+              <a className={`${styles.startBtn} ${styles.btn}`}>Start Learning</a>
+            </Link>
+            <Link href='https://www.sanity.io/docs'>
+              <a className={`${styles.docsBtn} ${styles.btn}`}>Documentation</a>
+            </Link>
+          </div>
         </div>
       </Layout>
     </div>

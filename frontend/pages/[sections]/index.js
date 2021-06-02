@@ -7,9 +7,7 @@ const Section = ({ data }) => {
   console.log(data)
 
   return (
-    <Layout> 
-
-    </Layout>
+    <Layout /> 
   )
 }
 

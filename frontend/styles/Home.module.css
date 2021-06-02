@@ -1,3 +1,10 @@
+.contentContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 65vh;
+}
+
 .headingContainer {
   margin: 6rem 0 0 0;
   display: flex;
