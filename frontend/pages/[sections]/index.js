@@ -1,13 +1,31 @@
 import { sanityClient, urlFor } from '../../sanity'
-import styles from '../../styles/Learn.module.css'
+import Link from 'next/link'
+import styles from '../../styles/Section.module.css'
 
 import Layout from '../../components/Layout'
  
 const Section = ({ data }) => {
-
+  console.log(data)
   return (
     <Layout current={data.title}> 
-
+      <div className={styles.sectionContainer}>
+        <h2 className={styles.sectionHeader}>{data.title}</h2>
+        <p className={styles.sectionDescription}>{data.description}</p>
+        <div className={styles.sectionModules}>
+          <h3 className={styles.moduleHeader}>Learning Modules</h3>
+          <ul>
+            {data.modules.map(module => (
+              <li className={styles.moduleLi} key={module.title}>
+                <Link href={`/${data.slug.current}/${module.slug.current}`}>
+                  <a>
+                  {module.title}
+                  </a>
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
     </Layout>
   )
 }
@@ -23,7 +41,16 @@ export const getStaticPaths = async () => {
 }
 
 export const getStaticProps = async ({ params }) => {
-  const query = `*[_type == 'section' && slug.current == $slug]`
+  const query = `*[_type == 'section' && slug.current == $slug]{
+    description,
+    icon,
+    modules[]->{
+      title,
+      slug
+    },
+    slug,
+    title
+  }`
   const data = await sanityClient.fetch(query, {
     slug: params.sections
   })
@@ -32,38 +59,5 @@ export const getStaticProps = async ({ params }) => {
     props: { data: data[0] }
   }
 }
-
-
-
-// export const getServerSideProps = async context => {
-//   const slug = context.query.sections
-//   console.log(slug)
-//   const query = `*[_type == 'section' && slug.current == $slug][0]{
-//   title,
-//   description,
-//   icon, 
-//   modules[]->
-//   }`
-
-//   const section = await sanityClient.fetch(query, { slug })
-
-//   if (! section) {
-//     return {
-//       props: {
-//         section: [],
-//       }
-//     }
-//   } else {
-//     return {
-//       props: {
-//         section,
-//       }
-//     }
-//   }
-// }
-
-//getStaticPaths { slugs }
-
-//getStaticProps { page content }
 
 export default Section

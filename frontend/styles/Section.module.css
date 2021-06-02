@@ -1,0 +1,30 @@
+.sectionContainer {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  padding: 2rem 4rem;
+  height: 65vh;
+}
+
+.sectionHeader {
+  width: fit-content;
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.sectionDescription {
+  margin: 2rem 0;
+  line-height: 1.4;
+  font-size: 1.3rem;
+  color: #515e72;
+}
+
+.moduleHeader {
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+.moduleLi {
+  margin: 1rem .5rem;
+  font-size: 1.2rem;
+}

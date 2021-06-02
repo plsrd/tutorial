@@ -24,6 +24,13 @@ nav {
   align-items: center;
 }
 
+main {
+  display: flex;
+  margin: 0 auto;
+  width: 80vw;
+  max-width: 1000px;
+}
+
 footer {
   border-top: 1px solid #cad1dc;
   width: 100vw;
@@ -32,3 +39,7 @@ footer {
   flex-direction: row;
   justify-content: space-around;
 }
+
+li{
+  list-style: inside;
+} 

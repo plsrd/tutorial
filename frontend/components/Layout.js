@@ -25,8 +25,9 @@ const Layout = ({ children, current }) => {
   }, [])
 
   return (
-    <main> 
+    <>
       <Nav />
+      <main> 
        {current ? 
         <Sidebar 
           sections={sections}
@@ -36,8 +37,9 @@ const Layout = ({ children, current }) => {
         null
       }
        {children}
+       </ main>
       <Footer />
-    </ main>
+    </>
   )
 }
 

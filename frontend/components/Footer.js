@@ -20,7 +20,7 @@ const Footer = () => {
         </div>
         <div className={styles.platformContainer}>
           <p className={styles.footerHeader}>Tutorial</p>
-          <Link href='/sections/'>
+          <Link href='/getting-started'>
             <a className={styles.footerLink}>Sections</a>
           </Link>
           <Link href='https://github.com/rlpennell/tutorial'>

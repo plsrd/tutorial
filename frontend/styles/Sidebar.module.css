@@ -1,8 +1,7 @@
 .sidebar {
+  min-width: fit-content;
   height: 90%;
-  width: 250px;
-  padding: 2rem;
-  margin: 1rem auto 0 6rem;
+  padding-top: 3rem;
 }
 
 .sidebarTitle {
@@ -12,4 +11,8 @@
 
 .module {
   font-weight: 300;
+}
+
+.current {
+  color: #2276fc;
 }
