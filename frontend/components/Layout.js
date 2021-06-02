@@ -1,11 +1,15 @@
 import Sidebar from './Sidebar'
+import Nav from './Nav'
+import Footer from './Footer'
 
-const Layout = ({ children }) => {
+const Layout = ({ sections, currentSection, children }) => {
 
   return (
     <main> 
-       <Sidebar />
+      <Nav />
+       {currentSection ? <Sidebar sections={sections} /> : null}
        {children}
+      <Footer />
     </ main>
   )
 }
