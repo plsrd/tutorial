@@ -4,10 +4,11 @@ import styles from '../../styles/Learn.module.css'
 import Layout from '../../components/Layout'
  
 const Section = ({ data }) => {
-  console.log(data)
 
   return (
-    <Layout /> 
+    <Layout current={data.title}> 
+
+    </Layout>
   )
 }
 
@@ -28,7 +29,7 @@ export const getStaticProps = async ({ params }) => {
   })
 
   return {
-    props: { data }
+    props: { data: data[0] }
   }
 }
 

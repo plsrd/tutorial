@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { sanityClient } from '../sanity'
 
 import Sidebar from './Sidebar'
@@ -6,7 +6,7 @@ import Nav from './Nav'
 import Footer from './Footer'
 
 
-const Layout = ({ children }) => {
+const Layout = ({ children, current }) => {
   const [sections, setSections] = useState([])
 
   useEffect(() => {
@@ -27,7 +27,14 @@ const Layout = ({ children }) => {
   return (
     <main> 
       <Nav />
-       <Sidebar sections={sections} /> 
+       {current ? 
+        <Sidebar 
+          sections={sections}
+          current={current}
+        />
+        :
+        null
+      }
        {children}
       <Footer />
     </ main>
