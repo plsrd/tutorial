@@ -1,14 +1,11 @@
 import Head from 'next/head'
 import Link from 'next/link'
-import { useState } from 'react'
 import { sanityClient } from '../sanity'
 import styles from '../styles/Home.module.css'
 
 import Layout from '../components/Layout'
 
 const Home = ({ data }) => {
-  const [sections, setSections] = useState(data)
-  const [currentSection, setCurrentSection] = useState({})
 
   return (
     <div className={styles.container}>
@@ -16,7 +13,7 @@ const Home = ({ data }) => {
         <title>Sanity Tutorial</title>
         <meta name="description" content="A beginner's guide to Sanity" />
       </Head>
-      <Layout sections={sections}>
+      <Layout>
         <div className={styles.contentContainer}>
           <div className={styles.headingContainer}>
             <h1 className={styles.mainHeading}>New to Sanity?</h1>

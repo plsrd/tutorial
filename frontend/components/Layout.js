@@ -1,13 +1,33 @@
+import { useEffect, useState } from 'react'
+import { sanityClient } from '../sanity'
+
 import Sidebar from './Sidebar'
 import Nav from './Nav'
 import Footer from './Footer'
 
-const Layout = ({ sections, currentSection, children }) => {
+
+const Layout = ({ children }) => {
+  const [sections, setSections] = useState([])
+
+  useEffect(() => {
+    const query = `*[_type == 'section']{
+      title,
+      slug,
+      modules[]->{
+        title,
+        slug
+      }
+    }`
+
+    sanityClient.fetch(query)
+    .then(data => setSections(data))
+    .catch(console.error)
+  }, [])
 
   return (
     <main> 
       <Nav />
-       {currentSection ? <Sidebar sections={sections} /> : null}
+       <Sidebar sections={sections} /> 
        {children}
       <Footer />
     </ main>

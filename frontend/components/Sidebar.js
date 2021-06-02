@@ -8,7 +8,7 @@ import { sanityClient } from '../sanity'
   return (
     <div className={styles.sidebar}>
       {sections.map(section => (
-        <Link href={`/learn/${section.slug.current}`} key={section.title}> 
+        <Link href={`/${section.slug.current}`} key={section.title}> 
           <a className={styles.sidebarTitle}>{section.title}</a>
         </Link>
       ))}
