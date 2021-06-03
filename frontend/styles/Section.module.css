@@ -1,22 +1,27 @@
-.sectionContainer {
+.lessonContainer {
   display: flex;
   flex-direction: column;
   flex-grow: 1;
-  padding: 2rem 4rem;
+  padding: 2rem 2rem 1rem 4rem;
   height: 65vh;
+  overflow: scroll;
 }
 
-.sectionHeader {
+.lessonHeader {
   width: fit-content;
   font-size: 3rem;
   font-weight: bold;
 }
 
-.sectionDescription {
+.sectionText {
   margin: 2rem 0;
   line-height: 1.4;
   font-size: 1.3rem;
   color: #515e72;
+}
+
+.lessonContainer a {
+  color: #1e63d0;
 }
 
 .moduleHeader {
@@ -26,5 +31,69 @@
 
 .moduleLi {
   margin: 1rem .5rem;
+  font-size: 1.2rem;
+}
+
+.btn {
+  text-align: center;
+  font-size: 1.1rem;
+  font-weight: 300;
+  padding: 1rem 3rem;
+  border-radius: 5px;
+  background-color: #1e63d0;
+  cursor: pointer;
+}
+
+.nextBtn {
+  margin-left: auto;
+}
+
+.btn a {
+  color: #fff;
+}
+
+.btnContainer {
+  margin: 6rem 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.moduleTitle {
+  margin: 3rem 0 1rem 0;
+}
+
+.learningOutcomes li {
+  line-height: 1.4;
+  font-size: 1.3rem;
+  color: #515e72;
+}
+
+.learningHeader {
+  margin: 2rem 0;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.lessonPlanContainer {
+  margin-top: 2rem;
+}
+
+.lessonComponent p {
+  line-height: 1.4;
+  font-size: 1.3rem;
+  color: #515e72;
+  margin: 1rem 0;
+}
+
+.lessonComponent h3 {
+  margin: 2rem 0;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.lessonComponent h4 {
+  margin: 1.5rem 0;
+  font-weight: bold;
   font-size: 1.2rem;
 }

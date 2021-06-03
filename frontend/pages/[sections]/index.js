@@ -8,8 +8,8 @@ const Section = ({ data }) => {
   console.log(data)
   return (
     <Layout current={data.title}> 
-      <div className={styles.sectionContainer}>
-        <h2 className={styles.sectionHeader}>{data.title}</h2>
+      <div className={styles.lessonContainer}>
+        <h2 className={styles.lessonHeader}>{data.title}</h2>
         <p className={styles.sectionDescription}>{data.description}</p>
         <div className={styles.sectionModules}>
           <h3 className={styles.moduleHeader}>Learning Modules</h3>
@@ -24,6 +24,11 @@ const Section = ({ data }) => {
               </li>
             ))}
           </ul>
+        </div>
+        <div className={`${styles.btn} ${styles.nextBtn}`}>
+          <Link href={`/${data.slug.current}/${data.modules[0].slug.current}`}>
+            <a>Next</a>
+          </Link>
         </div>
       </div>
     </Layout>

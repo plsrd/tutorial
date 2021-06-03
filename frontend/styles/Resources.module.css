@@ -1,0 +1,21 @@
+.resourceContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.resourceContainer h3 {
+  margin: 3rem 0 0 0;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.resourceContainer a {
+  font-size: 1.3rem;
+  margin: .5rem 0;
+}
+
+.resourceContainer p {
+  color: #515e72;
+  font-size: 1.3rem;
+  margin: 1rem 0;
+}

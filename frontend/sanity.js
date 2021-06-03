@@ -1,4 +1,8 @@
-import { createClient, createImageUrlBuilder } from "next-sanity"
+import { 
+  createClient, 
+  createImageUrlBuilder,
+  createPortableTextComponent
+} from "next-sanity"
 
 const config = {
   dataset: "production",
@@ -9,5 +13,18 @@ const config = {
 }
 
 export const urlFor = (source) => createImageUrlBuilder(config).image(source)
+
+export const PortableText = createPortableTextComponent({
+  ...config,
+  serializers: {
+    types: {
+      code: props => (
+        <pre data-language={props.node.language}>
+          <code>{props.node.code}</code>
+        </pre>
+      )
+    }
+  },
+})
 
 export const sanityClient = createClient(config)
