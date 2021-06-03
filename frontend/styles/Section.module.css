@@ -2,8 +2,8 @@
   display: flex;
   flex-direction: column;
   flex-grow: 1;
-  padding: 2rem 2rem 1rem 4rem;
-  height: 65vh;
+  padding: 2rem 2rem 0 4rem;
+  min-height: 100vh;
   overflow: scroll;
 }
 
@@ -27,6 +27,7 @@
 .moduleHeader {
   font-weight: bold;
   font-size: 2rem;
+  margin: 1.5rem 0;
 }
 
 .moduleLi {
@@ -53,7 +54,7 @@
 }
 
 .btnContainer {
-  margin: 6rem 0;
+  margin: 6rem 0 3rem 0;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -70,7 +71,7 @@
 }
 
 .learningHeader {
-  margin: 2rem 0;
+  margin: 1.5rem 0;
   font-weight: bold;
   font-size: 1.5rem;
 }

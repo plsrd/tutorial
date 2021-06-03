@@ -10,7 +10,7 @@ const Section = ({ data }) => {
     <Layout current={data.title}> 
       <div className={styles.lessonContainer}>
         <h2 className={styles.lessonHeader}>{data.title}</h2>
-        <p className={styles.sectionDescription}>{data.description}</p>
+        <p className={styles.sectionText}>{data.description}</p>
         <div className={styles.sectionModules}>
           <h3 className={styles.moduleHeader}>Learning Modules</h3>
           <ul>
@@ -25,10 +25,12 @@ const Section = ({ data }) => {
             ))}
           </ul>
         </div>
-        <div className={`${styles.btn} ${styles.nextBtn}`}>
-          <Link href={`/${data.slug.current}/${data.modules[0].slug.current}`}>
-            <a>Next</a>
-          </Link>
+        <div className={styles.btnContainer}>
+          <div className={`${styles.btn} ${styles.nextBtn}`}>
+            <Link href={`/${data.slug.current}/${data.modules[0].slug.current}`}>
+              <a>Next</a>
+            </Link>
+          </div>
         </div>
       </div>
     </Layout>
