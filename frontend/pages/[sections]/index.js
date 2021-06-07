@@ -63,7 +63,7 @@ const Button = styled.a`
 `
  
 const Section = ({ data }) => {
-  const { title, description, slug } = data
+  const { title, description, slug, modules } = data
   return (
     <Layout current={title}> 
       <Container>
@@ -72,7 +72,7 @@ const Section = ({ data }) => {
         <div>
           <ModuleHeader>Learning Modules</ModuleHeader>
           <ul>
-            {data.modules.map(module => (
+            {modules.map(module => (
               <Item key={module.title}>
                 <Link href={`/${slug.current}/${module.slug.current}`}>
                   <Module>
@@ -84,7 +84,7 @@ const Section = ({ data }) => {
           </ul>
         </div>
         <ButtonContainer>
-            <Link href={`/${data.slug.current}/${data.modules[0].slug.current}`}>
+            <Link href={`/${slug.current}/${modules[0].slug.current}`}>
               <Button>Next</Button>
             </Link>
         </ButtonContainer>
@@ -113,13 +113,13 @@ export const getStaticProps = async ({ params }) => {
     },
     slug,
     title
-  }`
+  }[0]`
   const data = await sanityClient.fetch(query, {
     slug: params.sections
   })
 
   return {
-    props: { data: data[0] }
+    props: { data: data }
   }
 }
 
