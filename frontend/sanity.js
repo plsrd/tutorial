@@ -22,6 +22,12 @@ export const PortableText = createPortableTextComponent({
         <pre data-language={props.node.language}>
           <code>{props.node.code}</code>
         </pre>
+      ),
+      gotcha: props => (
+        <div>
+          <p>Note</p>
+          <p>{props.node.text}</p>
+        </div>
       )
     }
   },

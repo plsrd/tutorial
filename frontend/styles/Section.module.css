@@ -98,3 +98,8 @@
   font-weight: bold;
   font-size: 1.2rem;
 }
+
+.lessonComponent img {
+  width: 100%;
+  border: 2px solid #515e72;
+}
