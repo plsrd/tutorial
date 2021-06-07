@@ -43,9 +43,10 @@ const Button  = styled.a`
   font-weight: 300;
   padding: 1rem;
   border-radius: 5px;
-  background-color: ${props => props.start ? '#1e63d0' : '#fff'};
-  color: ${props => props.start ? '#fff' : '#515e72'};
-  border: ${props => props.start ? 'none' : '1px solid #cad1dc'};
+  background-color: ${({start}) => start ? '#1e63d0' : '#fff'};
+  color: ${({start}) => start ? '#fff' : '#515e72'};
+  border: ${({start}) => start ? 'none' : '1px solid #cad1dc'};
+  cursor: pointer;
 `
 
 

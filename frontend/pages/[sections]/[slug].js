@@ -7,7 +7,12 @@ import NavButtons from '../../components/NavButtons'
 import LessonPlan from '../../components/LessonPlan'
 
 import styles from '../../styles/Section.module.css'
+import styled from 'styled-components'
 import Resources from '../../components/Resources'
+
+const Container = styled.div`
+
+`
 
 const Module = ({ data }) => {
   const {
@@ -22,7 +27,7 @@ const Module = ({ data }) => {
 
   return (
     <Layout current={parent.title}>
-      <div className={styles.lessonContainer}>
+      <Container>
         <h2 className={styles.lessonHeader}>{parent.title}</h2>
         <p className={`${styles.moduleHeader} ${styles.moduleTitle}`}>{title}</p>
         <div className={styles.sectionText}>
@@ -41,7 +46,7 @@ const Module = ({ data }) => {
           parent={parent} 
           title={title}
         />
-      </div>
+      </Container>
     </Layout>
   )
 }

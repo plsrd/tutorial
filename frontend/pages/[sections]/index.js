@@ -1,38 +1,94 @@
 import { sanityClient, urlFor } from '../../sanity'
 import Link from 'next/link'
 import styles from '../../styles/Section.module.css'
+import styled from 'styled-components'
 
 import Layout from '../../components/Layout'
+
+const Container = styled.div`
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  padding: 2rem 2rem 0 4rem;
+  min-height: 100vh;
+  overflow: scroll; 
+`
+
+const Header = styled.h2`
+  width: fit-content;
+  font-size: 3rem;
+  font-weight: bold;
+`
+
+const Description = styled.p` 
+  margin: 2rem 0;
+  line-height: 1.4;
+  font-size: 1.3rem;
+  color: #515e72;
+`
+
+const ModuleHeader = styled.h3`
+  font-weight: bold;
+  font-size: 2rem;
+  margin: 1.5rem 0;
+`
+
+const Item = styled.li`
+  margin: 1rem;
+  font-size: 1.2rem;
+`
+
+const Module = styled.a`
+  color: #1e63d0;
+  cursor: pointer;
+`
+
+const ButtonContainer = styled.div`
+  margin: 6rem 0 3rem 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+`
+
+const Button = styled.a`
+  text-align: center;
+  font-size: 1.1rem;
+  font-weight: 300;
+  padding: 1rem 3rem;
+  border-radius: 5px;
+  background-color: #1e63d0;
+  cursor: pointer;
+  margin-left: auto;
+  color: #fff
+`
  
 const Section = ({ data }) => {
-  console.log(data)
+  const { title, description, slug } = data
   return (
-    <Layout current={data.title}> 
-      <div className={styles.lessonContainer}>
-        <h2 className={styles.lessonHeader}>{data.title}</h2>
-        <p className={styles.sectionText}>{data.description}</p>
-        <div className={styles.sectionModules}>
-          <h3 className={styles.moduleHeader}>Learning Modules</h3>
+    <Layout current={title}> 
+      <Container>
+        <Header>{title}</Header>
+        <Description>{description}</Description>
+        <div>
+          <ModuleHeader>Learning Modules</ModuleHeader>
           <ul>
             {data.modules.map(module => (
-              <li className={styles.moduleLi} key={module.title}>
-                <Link href={`/${data.slug.current}/${module.slug.current}`}>
-                  <a>
+              <Item key={module.title}>
+                <Link href={`/${slug.current}/${module.slug.current}`}>
+                  <Module>
                   {module.title}
-                  </a>
+                  </Module>
                 </Link>
-              </li>
+              </Item>
             ))}
           </ul>
         </div>
-        <div className={styles.btnContainer}>
-          <div className={`${styles.btn} ${styles.nextBtn}`}>
+        <ButtonContainer>
             <Link href={`/${data.slug.current}/${data.modules[0].slug.current}`}>
-              <a>Next</a>
+              <Button>Next</Button>
             </Link>
-          </div>
-        </div>
-      </div>
+        </ButtonContainer>
+      </Container>
     </Layout>
   )
 }
