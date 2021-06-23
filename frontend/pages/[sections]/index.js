@@ -1,6 +1,5 @@
 import { sanityClient, urlFor } from '../../sanity'
 import Link from 'next/link'
-import styles from '../../styles/Section.module.css'
 import styled from 'styled-components'
 
 import Layout from '../../components/Layout'

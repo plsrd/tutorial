@@ -1,6 +1,13 @@
 import Link from 'next/link'
 import Image from 'next/image'
-import styles from '../styles/Nav.module.css'
+
+import styled from 'styled-components'
+
+const A = styled.a`
+  font-size: 1.2rem;
+  font-weight: medium;
+  margin: 1rem; 
+`
 
 const Nav = () => {
   return (
@@ -10,10 +17,10 @@ const Nav = () => {
       </Link>
       <div>
         <Link href='https://www.sanity.io/docs' >
-          <a className={styles.navLink}>Docs</a>
+          <A>Docs</A>
         </Link>
         <Link href='https://www.sanity.io/exchange'>
-          <a className={styles.navLink}>Exchange</a>
+          <A>Exchange</A>
         </Link>
       </div>
     </nav>

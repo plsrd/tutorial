@@ -17,6 +17,14 @@ export const urlFor = (source) => createImageUrlBuilder(config).image(source)
 export const PortableText = createPortableTextComponent({
   ...config,
   serializers: {
+    marks: {
+      link: ({mark, children}) => {
+        const { blank, href } = mark
+        return blank ?
+          <a href={href} target="_blank" rel="noopener">{children}</a>
+          : <a href={href}>{children}</a>
+      }
+    },
     types: {
       code: props => (
         <pre data-language={props.node.language}>
