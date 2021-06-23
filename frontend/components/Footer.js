@@ -1,40 +1,75 @@
 import Link from 'next/link'
 import Image from 'next/image'
-import styles from '../styles/Footer.module.css'
+
+import styled from 'styled-components'
+
+const Container = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 30%;
+`
+
+const Section = styled.div`
+  height: 15vh;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+`
+
+const Header = styled.p`
+  font-weight: bold;
+  margin: .5rem 0;
+`
+
+const A = styled.a`
+  margin: .5rem 0;
+`
+
+const SlackContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`
+
+const Description = styled.a`
+  color: #515e72;
+  margin: 1rem;
+`
 
 const Footer = () => {
   return (
     <footer>
-      <div className={styles.footerContainer}>
-        <div className={styles.platformContainer}>
-          <p className={styles.footerHeader}>Sanity</p>
+      <Container>
+        <Section>
+          <Header>Sanity</Header>
           <Link href='https://www.sanity.io/'>
-            <a className={styles.footerLink}>Platform</a>
+            <A>Platform</A>
           </Link>
           <Link href='https://www.sanity.io/docs'>
-            <a className={styles.footerLink}>Documentation</a>
+            <A>Documentation</A>
           </Link>
           <Link href='https://www.sanity.io/exchange'>
-            <a className={styles.footerLink}>Exchange</a>
+            <A>Exchange</A>
           </Link>
-        </div>
-        <div className={styles.platformContainer}>
-          <p className={styles.footerHeader}>Tutorial</p>
+        </Section>
+        <Section>
+          <Header>Tutorial</Header>
           <Link href='/getting-started'>
-            <a className={styles.footerLink}>Sections</a>
+            <A>Sections</A>
           </Link>
           <Link href='https://github.com/rlpennell/tutorial'>
-            <a className={styles.footerLink}>Github</a>
+            <A>Github</A>
           </Link>
-        </div>
-      </div>
-      <div className={styles.slackContainer}>
-        <p className={styles.footerHeader}>Have questions?</p>
-        <p className={styles.footerDescription}>Get help in the Sanity Slack community!</p>
+        </Section>
+      </Container>
+      <SlackContainer>
+        <Header>Have questions?</Header>
+        <Description>Get help in the Sanity Slack community!</Description>
         <Link href='https://slack.sanity.io/'>
           <a><Image src='/slack.svg' width={30} height={30}/></a>
         </Link>
-      </div>
+      </SlackContainer>
     </footer>
   )
 }
