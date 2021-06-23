@@ -11,7 +11,32 @@ import styled from 'styled-components'
 import Resources from '../../components/Resources'
 
 const Container = styled.div`
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  padding: 2rem 2rem 0 4rem;
+  min-height: 100vh;
+  overflow: scroll;
+`
 
+const Header = styled.h2`
+  width: fit-content;
+  font-size: 3rem;
+  font-weight: bold;
+`
+
+const Title = styled.p`
+  font-weight: bold;
+  font-size: 2rem;
+  margin: 1.5rem 0;
+  margin: 3rem 0 1rem 0;
+`
+
+const Text = styled.div`
+  margin: 2rem 0;
+  line-height: 1.4;
+  font-size: 1.3rem;
+  color: #515e72;
 `
 
 const Module = ({ data }) => {
@@ -28,11 +53,11 @@ const Module = ({ data }) => {
   return (
     <Layout current={parent.title}>
       <Container>
-        <h2 className={styles.lessonHeader}>{parent.title}</h2>
-        <p className={`${styles.moduleHeader} ${styles.moduleTitle}`}>{title}</p>
-        <div className={styles.sectionText}>
+        <Header>{parent.title}</Header>
+        <Title>{title}</Title>
+        <Text>
           <PortableText blocks={introduction} />
-        </div>
+        </Text>
         <LearningOutcomes outcomes = {learningOutcomes} />
         <LessonPlan lessonPlan={lessonPlan}/>
         {

@@ -50,7 +50,7 @@ const Button  = styled.a`
 `
 
 
-const Home = ({ data }) => {
+const Home = () => {
 
   return (
     <div>

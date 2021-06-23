@@ -1,56 +1,12 @@
-.lessonContainer {
-  display: flex;
-  flex-direction: column;
-  flex-grow: 1;
-  padding: 2rem 2rem 0 4rem;
-  min-height: 100vh;
-  overflow: scroll;
-}
 
-.lessonHeader {
-  width: fit-content;
-  font-size: 3rem;
-  font-weight: bold;
-}
-
-.sectionText {
-  margin: 2rem 0;
-  line-height: 1.4;
-  font-size: 1.3rem;
-  color: #515e72;
-}
 
 .lessonContainer a {
   color: #1e63d0;
 }
 
-.moduleHeader {
-  font-weight: bold;
-  font-size: 2rem;
-  margin: 1.5rem 0;
-}
-
 .moduleLi {
   margin: 1rem .5rem;
   font-size: 1.2rem;
-}
-
-.btn {
-  text-align: center;
-  font-size: 1.1rem;
-  font-weight: 300;
-  padding: 1rem 3rem;
-  border-radius: 5px;
-  background-color: #1e63d0;
-  cursor: pointer;
-}
-
-.nextBtn {
-  margin-left: auto;
-}
-
-.btn a {
-  color: #fff;
 }
 
 .btnContainer {

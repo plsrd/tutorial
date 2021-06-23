@@ -1,7 +1,6 @@
-import { sanityClient, urlFor } from '../../sanity'
+import { sanityClient } from '../../sanity'
 import Link from 'next/link'
 import styled from 'styled-components'
-
 import Layout from '../../components/Layout'
 
 const Container = styled.div`
@@ -47,6 +46,7 @@ const ButtonContainer = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  margin-left: auto;
 `
 
 const Button = styled.a`
@@ -57,7 +57,6 @@ const Button = styled.a`
   border-radius: 5px;
   background-color: #1e63d0;
   cursor: pointer;
-  margin-left: auto;
   color: #fff
 `
  
