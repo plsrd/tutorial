@@ -1,42 +1,13 @@
 import Link from 'next/link'
 import Image from 'next/image'
-
-import styled from 'styled-components'
-
-const Container = styled.div`
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  width: 30%;
-`
-
-const Section = styled.div`
-  height: 15vh;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-`
-
-const Header = styled.p`
-  font-weight: bold;
-  margin: .5rem 0;
-`
-
-const A = styled.a`
-  margin: .5rem 0;
-  color: #515e72;
-`
-
-const SlackContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-`
-
-const Description = styled.a`
-  color: #515e72;
-  margin: 1rem;
-`
+import {
+  Container,
+  Section,
+  Header,
+  A,
+  SlackContainer,
+  Description
+} from '../styles/footer'
 
 const Footer = () => {
   return (

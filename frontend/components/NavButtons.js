@@ -1,28 +1,5 @@
 import Link from 'next/link'
-
-import styled from 'styled-components'
-
-const Button = styled.div`
-  text-align: center;
-  font-size: 1.1rem;
-  font-weight: 300;
-  padding: 1rem 3rem;
-  border-radius: 5px;
-  background-color: #1e63d0;
-  cursor: pointer;
-  ${props => props.next ? 'margin-left: auto;' : ''}
-`
-
-const Container = styled.div`
-  margin: 6rem 0 3rem 0;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-`
-
-const A = styled.a`
-  color: #fff;
-`
+import { Button, Container, A } from '../styles/navButtons'
 
 const NavButtons = ({ parent, title }) => {
   const currentIndex= parent.modules.findIndex(module => module.title === title)
