@@ -8,6 +8,6 @@ export const Header = styled.h3`
 
 export const Item = styled.li`
   line-height: 1.4;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   color: #515e72;
 `

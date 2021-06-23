@@ -18,11 +18,8 @@ const A = styled.a`
   color: #1e63d0;
 `
 
-const Content = styled.p`
-  line-height: 1.4;
-  font-size: 1.3rem;
-  color: #515e72;
-  margin: 1rem 0;
+const Gotcha = styled.div`
+  background-color: #515e721a;
 `
 
 export const urlFor = (source) => createImageUrlBuilder(config).image(source)
@@ -45,10 +42,10 @@ export const PortableText = createPortableTextComponent({
         </pre>
       ),
       gotcha: props => (
-        <div>
+        <Gotcha>
           <p>Note</p>
           <p>{props.node.text}</p>
-        </div>
+        </Gotcha>
       )
     }
   },

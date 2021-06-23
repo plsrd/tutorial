@@ -26,6 +26,6 @@ export const Title = styled.p`
 export const Text = styled.div`
   margin: 2rem 0;
   line-height: 1.4;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   color: #515e72;
 `
