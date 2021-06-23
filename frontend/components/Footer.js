@@ -24,6 +24,7 @@ const Header = styled.p`
 
 const A = styled.a`
   margin: .5rem 0;
+  color: #515e72;
 `
 
 const SlackContainer = styled.div`

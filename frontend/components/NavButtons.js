@@ -10,6 +10,7 @@ const Button = styled.div`
   border-radius: 5px;
   background-color: #1e63d0;
   cursor: pointer;
+  ${props => props.next ? 'margin-left: auto;' : ''}
 `
 
 const Container = styled.div`
@@ -42,13 +43,22 @@ const NavButtons = ({ parent, title }) => {
         null
       }
       {
-        nextModule ? (
-          <Button>
-            <Link href={`/${parent.slug.current}/${nextModule.slug.current}`}>
-              <A>Next</A>
-            </Link>
-          </Button>
-        )
+        nextModule ? 
+          prevModule ? (
+            <Button>
+              <Link href={`/${parent.slug.current}/${nextModule.slug.current}`}>
+                <A>Next</A>
+              </Link>
+            </Button>
+          )
+          :
+          (
+            <Button next>
+              <Link href={`/${parent.slug.current}/${nextModule.slug.current}`}>
+                <A>Next</A>
+              </Link>
+            </Button>
+          )
         :
         null
       }

@@ -7,6 +7,7 @@ const A = styled.a`
   font-size: 1.2rem;
   font-weight: medium;
   margin: 1rem; 
+  color: #515e72;
 `
 
 const Nav = () => {

@@ -13,7 +13,8 @@ body {
 
 a {
   text-decoration: none;
-  color: #515e72;
+  cursor: pointer;
+  color: #2276fc;
 }
 
 nav {
@@ -40,7 +41,7 @@ footer {
   justify-content: space-around;
 }
 
-li{
+li {
   list-style: inside;
 } 
 
@@ -49,6 +50,7 @@ code {
   font-size: 1rem;
   background-color: rgba(27, 31, 35, 0.05);
   padding: 0 5px;
+  background: transparent;
 }
 
 pre {
@@ -57,7 +59,4 @@ pre {
   background-color: rgba(27, 31, 35, 0.05);
 }
 
-pre code {
-  background: transparent;
-}
 

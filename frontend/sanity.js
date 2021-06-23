@@ -4,6 +4,8 @@ import {
   createPortableTextComponent
 } from "next-sanity"
 
+import styled from "styled-components"
+
 const config = {
   dataset: "production",
   projectId: '504kkums',
@@ -11,6 +13,17 @@ const config = {
   apiVersion: '2020-05-20'
 
 }
+
+const A = styled.a`
+  color: #1e63d0;
+`
+
+const Content = styled.p`
+  line-height: 1.4;
+  font-size: 1.3rem;
+  color: #515e72;
+  margin: 1rem 0;
+`
 
 export const urlFor = (source) => createImageUrlBuilder(config).image(source)
 
@@ -21,9 +34,9 @@ export const PortableText = createPortableTextComponent({
       link: ({mark, children}) => {
         const { blank, href } = mark
         return blank ?
-          <a href={href} target="_blank" rel="noopener">{children}</a>
-          : <a href={href}>{children}</a>
-      }
+          <A href={href} target="_blank" rel="noopener">{children}</A>
+          : <A href={href}>{children}</A>
+      },
     },
     types: {
       code: props => (
