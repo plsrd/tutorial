@@ -1,17 +1,26 @@
 import Link from 'next/link'
-import { sanityClient } from '../sanity'
- 
-import styles from '../styles/Sidebar.module.css'
+
+import styled from 'styled-components'
+
+const Container = styled.div`
+  min-width: fit-content;
+  height: 90%;
+  padding-top: 3rem;
+`
+
+const Title = styled.a`
+  font-size: 1.2rem;
+`
  
 const Sidebar = ({ sections, current }) => {
   return (
-    <div className={styles.sidebar}>
+    <Container>
       {sections.map(section => (
         <Link href={`/${section.slug.current}`} key={section.title}> 
-          <a className={`${styles.sidebarTitle} ${styles.current}`}>{section.title}</a>
+          <Title>{section.title}</Title>
         </Link>
       ))}
-    </div>
+    </Container>
   )
 }
 

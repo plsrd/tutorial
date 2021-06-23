@@ -8,8 +8,6 @@ const Header = styled.h3`
   font-size: 1.5rem;
 `
 
-
-
 const LessonPlan = ({lessonPlan}) => {
   return (
     <div >
