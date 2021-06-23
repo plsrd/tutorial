@@ -1,7 +1,5 @@
 import Link from 'next/link'
 
-import styles from '../styles/Section.module.css'
-
 import styled from 'styled-components'
 
 const Button = styled.div`

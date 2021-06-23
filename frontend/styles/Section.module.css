@@ -9,6 +9,8 @@
   font-size: 1.2rem;
 }
 
+
+
 .btnContainer {
   margin: 6rem 0 3rem 0;
   display: flex;
@@ -20,17 +22,7 @@
   margin: 3rem 0 1rem 0;
 }
 
-.learningOutcomes li {
-  line-height: 1.4;
-  font-size: 1.3rem;
-  color: #515e72;
-}
 
-.learningHeader {
-  margin: 1.5rem 0;
-  font-weight: bold;
-  font-size: 1.5rem;
-}
 
 .lessonPlanContainer {
   margin-top: 2rem;

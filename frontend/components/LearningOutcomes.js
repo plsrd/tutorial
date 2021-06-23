@@ -1,17 +1,29 @@
-import styles from '../styles/Section.module.css'
+import styled from 'styled-components'
 
-const LearningOutcomes = ({outcomes}) => {
+const Header = styled.h3`
+  margin: 1.5rem 0;
+  font-weight: bold;
+  font-size: 1.5rem;
+`
+
+const Item = styled.li`
+  line-height: 1.4;
+  font-size: 1.3rem;
+  color: #515e72;
+`
+
+const LearningOutcomes = ({ outcomes }) => {
   return (
-  <div className={styles.learningOutcomes}>
-  <h3 className={styles.learningHeader}>Learning Outcomes</h3>
-  <ul>
-  {
-    outcomes.map((outcome, index) => (
-      <li key={index}>{outcome}</li>
-    ))
-  }
-  </ul>
-</div>
+  <div>
+    <Header>Learning Outcomes</Header>
+    <ul>
+    {
+      outcomes.map((outcome, index) => (
+        <Item key={index}>{outcome}</Item>
+      ))
+    }
+    </ul>
+  </div>
   )
 }
 
