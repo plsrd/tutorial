@@ -1,57 +1,20 @@
 import Head from 'next/head'
 import Link from 'next/link'
 import { sanityClient } from '../sanity'
-import styled from 'styled-components'
 
 import Layout from '../components/Layout'
 
-const Container = styled.div`
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  height: 65vh;
-`
-const Content = styled.div`
-  margin: 6rem 0 0 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-`
-const Heading = styled.h1`
-  font-size: 5rem;
-  color: #121923;
-  font-weight: bold;
-`
-const Description = styled.p`
-  margin: 4rem 0 3rem 0;
-  font-weight: 300;
-  font-size: 1.5rem;
-  color: #515e72;
-`
+import {
+  Container,
+  Content,
+  Heading,
+  Description,
+  ButtonContainer,
+  Button,
+} from './style'
 
-const ButtonContainer = styled.div`
-  width: 310px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-`
-
-const Button  = styled.a`
-  text-align: center;
-  font-size: 1.1rem;
-  font-weight: 300;
-  padding: 1rem;
-  border-radius: 5px;
-  background-color: ${({start}) => start ? '#1e63d0' : '#fff'};
-  color: ${({start}) => start ? '#fff' : '#515e72'};
-  border: ${({start}) => start ? 'none' : '1px solid #cad1dc'};
-  cursor: pointer;
-`
-
-
-const Home = () => {
-
+const Home = ({ data }) => {
+  const { header, description } = data
   return (
     <div>
       <Head>
@@ -61,8 +24,8 @@ const Home = () => {
       <Layout>
         <Container>
           <Content>
-            <Heading>New to Sanity?</Heading>
-            <Description>Learn how to use the powerful unified content plaftorm here</Description>
+            <Heading>{header}</Heading>
+            <Description>{description}</Description>
           </Content>
           <ButtonContainer>
             <Link href='/getting-started'>
@@ -79,14 +42,9 @@ const Home = () => {
 }
 
 export const getStaticProps = async () => {
-  const query = `*[_type == 'section']{
-    title,
-    slug,
-    description,
-    icon,
-    modules[]->{
-      title
-    }
+  const query = `*[_type == 'landingPage'][0]{
+    header,
+    description
   }`
   const data = await sanityClient.fetch(query)
 
