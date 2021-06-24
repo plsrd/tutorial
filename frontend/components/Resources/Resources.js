@@ -14,8 +14,8 @@ const Resources = ({ resources }) => {
       <Description>Checkout these resources for a deeper dive into this module's topics</Description>
       {
         resources.map(resource => (
-          <Link key={resource._key} href={resource.link}>
-            <A>{resource.text}</A>
+          <Link key={resource._key} href={resource.url}>
+            <a>{resource.title}</a>
           </Link>
         ))
       }

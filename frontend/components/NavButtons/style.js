@@ -6,7 +6,7 @@ export const Button = styled.div`
   font-weight: 300;
   padding: 1rem 3rem;
   border-radius: 5px;
-  background-color: #1e63d0;
+  background-color: #2276fc;
   cursor: pointer;
   ${props => props.next ? 'margin-left: auto;' : ''}
 `

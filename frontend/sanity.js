@@ -15,11 +15,19 @@ const config = {
 }
 
 const A = styled.a`
-  color: #1e63d0;
+  color: #2276fc;
 `
 
 const Gotcha = styled.div`
   background-color: #515e721a;
+`
+const GotchaHeader = styled.p`
+  font-weight: bold;
+  padding: 1.5rem 2rem .5rem 2rem;
+`
+
+const GotchaText = styled.p`
+  padding: 0 2rem 2rem 2rem;
 `
 
 export const urlFor = (source) => createImageUrlBuilder(config).image(source)
@@ -43,8 +51,8 @@ export const PortableText = createPortableTextComponent({
       ),
       gotcha: props => (
         <Gotcha>
-          <p>Note</p>
-          <p>{props.node.text}</p>
+          <GotchaHeader>Note</GotchaHeader>
+          <GotchaText>{props.node.text}</GotchaText>
         </Gotcha>
       )
     }
