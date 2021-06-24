@@ -77,9 +77,14 @@ export default {
           type: 'object',
           fields: [
             {
-              name: 'resource',
-              title: 'Resource',
-              type: 'blockContent'
+              name: 'title',
+              title: 'Title',
+              type: 'string',
+            },
+            {
+              name: 'url',
+              title: 'URL',
+              type: 'url'
             }
           ]
         }
