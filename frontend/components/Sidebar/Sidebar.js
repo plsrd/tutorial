@@ -2,7 +2,6 @@ import Link from 'next/link'
 import { Container, Title } from './style'
  
 const Sidebar = ({ sections, current }) => {
-  console.log(sections)
   return (
     <Container>
       {sections.map(section => (

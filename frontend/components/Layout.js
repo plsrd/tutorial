@@ -10,19 +10,23 @@ const Layout = ({ children, current }) => {
   const [sections, setSections] = useState([])
 
   useEffect(() => {
-    const query = `*[_type == 'section']{
-      title,
-      slug,
-      modules[]->{
+    const query = `*[_type == 'orderSections']{
+      order[]->{
         title,
-        slug
+        slug,
+        modules[]->{
+          title,
+          slug
+        }
       }
     }`
 
     sanityClient.fetch(query)
-    .then(data => setSections(data))
+    .then(data => setSections(data[0].order))
     .catch(console.error)
   }, [])
+
+  console.log(sections)
 
   return (
     <>
