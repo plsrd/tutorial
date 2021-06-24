@@ -1,17 +1,17 @@
-import { sanityClient, PortableText } from '../../sanity'
+import { sanityClient, PortableText } from '../../../sanity'
 
-import Layout from '../../components/Layout'
-import LearningOutcomes from '../../components/LearningOutcomes'
-import NavButtons from '../../components/NavButtons'
-import LessonPlan from '../../components/LessonPlan'
-import Resources from '../../components/Resources'
+import Layout from '../../../components/Layout'
+import LearningOutcomes from '../../../components/LearningOutcomes/LearningOutcomes'
+import NavButtons from '../../../components/NavButtons/NavButtons'
+import LessonPlan from '../../../components/LessonPlan/LessonPlan'
+import Resources from '../../../components/Resources/Resources'
 
 import {
     Container,
     Title,
     Header,
     Text
-} from '../../styles/slug'
+} from './style'
 
 const Module = ({ data }) => {
   const {

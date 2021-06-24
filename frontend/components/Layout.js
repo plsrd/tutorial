@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react'
 import { sanityClient } from '../sanity'
 
-import Sidebar from './Sidebar'
+import Sidebar from './Sidebar/Sidebar'
 import Nav from './Nav'
-import Footer from './Footer'
+import Footer from './Footer/Footer'
 
 
 const Layout = ({ children, current }) => {

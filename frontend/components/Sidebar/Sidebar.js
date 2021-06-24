@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { Container, Title } from '../styles/sidebar'
+import { Container, Title } from './style'
  
 const Sidebar = ({ sections, current }) => {
   return (

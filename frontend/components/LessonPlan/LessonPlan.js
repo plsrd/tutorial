@@ -1,5 +1,5 @@
-import { PortableText } from '../sanity'
-import { Header, Container } from '../styles/lessonPlan'
+import { PortableText } from '../../sanity'
+import { Header, Container } from './style'
 
 
 const LessonPlan = ({lessonPlan}) => {

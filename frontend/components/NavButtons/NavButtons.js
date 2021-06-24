@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { Button, Container, A } from '../styles/navButtons'
+import { Button, Container, A } from './style'
 
 const NavButtons = ({ parent, title }) => {
   const currentIndex= parent.modules.findIndex(module => module.title === title)

@@ -7,7 +7,7 @@ import {
   A,
   SlackContainer,
   Description
-} from '../styles/footer'
+} from './style'
 
 const Footer = () => {
   return (

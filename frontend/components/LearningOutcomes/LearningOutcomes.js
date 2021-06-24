@@ -1,4 +1,4 @@
-import { Header, Item } from "../styles/learningOutcomes"
+import { Header, Item } from "./style"
 
 const LearningOutcomes = ({ outcomes }) => {
   return (

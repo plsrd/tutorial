@@ -4,7 +4,7 @@ import {
   Title,
   Description,
   A
-} from '../styles/resources'
+} from './style'
 
 
 const Resources = ({ resources }) => {
