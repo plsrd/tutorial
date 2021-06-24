@@ -1,4 +1,3 @@
-import { documentList } from '@sanity/desk-tool/structure-builder'
 import { BiCodeBlock } from 'react-icons/bi'
 
 export default {

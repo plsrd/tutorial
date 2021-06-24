@@ -10,6 +10,7 @@ import module from './module'
 import figure from './figure'
 import blockContent from './blockContent'
 import landingPage from './landingPage'
+import orderSections from './orderSections'
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -24,6 +25,7 @@ export default createSchema({
     module,
     section,
     blockContent,
-    landingPage
+    landingPage,
+    orderSections
   ]),
 })
