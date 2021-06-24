@@ -39,7 +39,6 @@ const Module = ({ data }) => {
           :
           null
         }
-        
         <NavButtons 
           parent={parent} 
           title={title}

@@ -9,6 +9,9 @@ export const Button = styled.div`
   background-color: #2276fc;
   cursor: pointer;
   ${props => props.next ? 'margin-left: auto;' : ''}
+  & a {
+    color: #fff;
+  }
 `
 
 export const Container = styled.div`
@@ -16,8 +19,4 @@ export const Container = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-`
-
-export const A = styled.a`
-  color: #fff;
 `

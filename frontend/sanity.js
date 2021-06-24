@@ -11,12 +11,7 @@ const config = {
   projectId: '504kkums',
   useCdn: true,
   apiVersion: '2020-05-20'
-
 }
-
-const A = styled.a`
-  color: #2276fc;
-`
 
 const Gotcha = styled.div`
   background-color: #515e721a;
@@ -39,8 +34,8 @@ export const PortableText = createPortableTextComponent({
       link: ({mark, children}) => {
         const { blank, href } = mark
         return blank ?
-          <A href={href} target="_blank" rel="noopener">{children}</A>
-          : <A href={href}>{children}</A>
+          <a href={href} target="_blank" rel="noopener">{children}</a>
+          : <a href={href}>{children}</a>
       },
     },
     types: {

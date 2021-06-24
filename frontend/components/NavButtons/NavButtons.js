@@ -12,7 +12,7 @@ const NavButtons = ({ parent, title }) => {
         prevModule ? (
           <Button>
             <Link href={`/${parent.slug.current}/${prevModule.slug.current}`}>
-              <A>Prev</A>
+              <a>Prev</a>
             </Link>
           </Button>
         )
@@ -24,15 +24,16 @@ const NavButtons = ({ parent, title }) => {
           prevModule ? (
             <Button>
               <Link href={`/${parent.slug.current}/${nextModule.slug.current}`}>
-                <A>Next</A>
+                <a>Next</a>
               </Link>
             </Button>
           )
           :
           (
             <Button next>
+              {console.log(`/${parent.slug.current}/${nextModule.slug.current}`)}
               <Link href={`/${parent.slug.current}/${nextModule.slug.current}`}>
-                <A>Next</A>
+                <a>Next</a>
               </Link>
             </Button>
           )
