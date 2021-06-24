@@ -14,12 +14,6 @@ export default {
       validation: Rule => Rule.required()
     },
     {
-      name: 'icon',
-      title: 'Icon',
-      type: 'figure',
-      validation: Rule => Rule.required()
-    },
-    {
       name: 'slug',
       title: 'Slug',
       type: 'slug',

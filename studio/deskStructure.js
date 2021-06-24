@@ -1,21 +1,18 @@
 import S from '@sanity/desk-tool/structure-builder'
-import { BiColumns, BiMapAlt } from 'react-icons/bi'
+import { BiMapAlt, BiDetail } from 'react-icons/bi'
 
 export default () =>
 S.list()
 .title('Base')
 .items([
   S.listItem()
-    .title('Blog')
-    .icon(BiColumns)
-    .child(
-      S.list()
-        .title('Blog Documents')
-        .items([
-          S.documentTypeListItem('post'),
-          S.documentTypeListItem('author')
-        ])
-    ),
+  .title('Landing Page')
+  .icon(BiDetail)
+  .child(
+    S.document()
+      .schemaType('landingPage')
+      .documentId('landingPage')
+  ),
   S.listItem()
    .title('Learning Path')
    .icon(BiMapAlt)
@@ -27,4 +24,6 @@ S.list()
         S.documentTypeListItem('module')
       ])
   ),
+  S.divider(),
+  S.documentTypeListItem('author')
 ])

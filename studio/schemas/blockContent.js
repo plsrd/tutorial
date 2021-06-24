@@ -28,37 +28,25 @@ export default {
         ],
         annotations: [
           {
-            title: 'externalLink',
             name: 'link',
             type: 'object',
-            icon: BiLinkExternal,
+            title: 'External link',
+            icon: BiLink,
             fields: [
               {
-                title: 'URL',
                 name: 'href',
                 type: 'url',
+                title: 'URL'
               },
-            ],
-          },
-          {
-            name: 'internalLink',
-            type: 'object',
-            title: 'Internal link',
-            blockEditor: {
-              icon: BiLink
-            },
-            fields: [
               {
-                name: 'reference',
-                type: 'reference',
-                to: [
-                  { type: 'post' },
-                  { type: 'module'},
-                  { type: 'section' },
-                ]
+                title: 'Open in new tab',
+                name: 'blank',
+                description: 'Read https://css-tricks.com/use-target_blank/',
+                type: 'boolean'
               }
             ]
-          }
+          },
+
         ],
       },
     },
@@ -68,6 +56,18 @@ export default {
     },
     {
       type: 'code'
+    },
+    {
+      name: 'gotcha',
+      title: 'Gotcha',
+      type: 'object',
+      fields: [
+        {
+          title: 'Text',
+          name: 'text',
+          type: 'text'
+        }
+      ]
     }
   ],
 }
