@@ -5,7 +5,7 @@ export const Container = styled.div`
   flex-direction: column;
   flex-grow: 1;
   padding: 2rem 2rem 0 4rem;
-  min-height: 100vh;
+  min-height: 70vh;
   overflow: scroll; 
 `
 

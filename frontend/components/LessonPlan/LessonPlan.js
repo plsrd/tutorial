@@ -7,7 +7,7 @@ const LessonPlan = ({lessonPlan}) => {
     <div >
       {
         lessonPlan.map(lesson => (
-          <Container>
+          <Container key={lesson._key}>
             <Header>{lesson.title}</Header>
             <PortableText blocks={lesson.content} />
           </Container>
