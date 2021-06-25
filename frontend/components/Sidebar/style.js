@@ -8,19 +8,29 @@ export const Container = styled.div`
 export const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
-    & .module {
+  margin-top: .7rem;
+  ${props => props.current? 
+    `& .module {
       color: #515e72;
-      margin: .3rem 0;
+      margin: .5rem 0;
       padding-left: .5rem;
+      font-size: .8rem;
     };
-    & .current {
-      font-size: 1.1rem;
-      font-weight: bold;
+    & .title {
+      font-size: 1rem;
       color: #2276fc;
-      margin-bottom: .5rem;
     };
     & .icon {
-      margin-left: .3rem;
-      height: 15px;
+      padding-bottom: .1rem;
+      height: 10px;
+    }`
+    : 
+    `
+    & .title {
+      color: #515e72;
+      font-size: 1rem;
     }
+    `
+  }
+    
 `

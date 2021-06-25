@@ -28,7 +28,7 @@ const Home = ({ data }) => {
             <Description>{description}</Description>
           </Content>
           <ButtonContainer>
-            <Link href='/getting-started'>
+            <Link href='/required-knowledge'>
               <Button start='true'>Start Learning</Button>
             </Link>
             <Link href='https://www.sanity.io/docs'>

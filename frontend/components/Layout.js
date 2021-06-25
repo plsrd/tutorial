@@ -26,8 +26,6 @@ const Layout = ({ children, current }) => {
     .catch(console.error)
   }, [])
 
-  console.log(sections)
-
   return (
     <>
       <Nav />

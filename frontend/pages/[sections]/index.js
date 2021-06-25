@@ -15,17 +15,19 @@ import {
 
  
 const Section = ({ data }) => {
-  const { title, description, slug, modules } = data
-  console.log(title)
+  const { title, description, slug, modules, allSections } = data
+  
+  const currentIndex = allSections.order.findIndex(section => section.title === title)
+
   return (
     <Layout current={title}> 
       <Container>
         <Header>{title}</Header>
         <Description>{description}</Description>
         <div>
-          <ModuleHeader>Learning Modules</ModuleHeader>
+          {modules && <ModuleHeader>Learning Modules</ModuleHeader>}
           <ul>
-            {modules.map(module => (
+            {modules && modules.map(module => (
               <Item key={module.title}>
                 <Link href={`/${slug.current}/${module.slug.current}`}>
                   <Module>
@@ -37,7 +39,12 @@ const Section = ({ data }) => {
           </ul>
         </div>
         <ButtonContainer>
-            <Link href={`/${slug.current}/${modules[0].slug.current}`}>
+            <Link 
+              href={modules ? 
+                `/${slug.current}/${modules[0].slug.current}`
+                : 
+                `/${allSections.order[currentIndex + 1].slug}`
+              }>
               <Button>Next</Button>
             </Link>
         </ButtonContainer>
@@ -65,7 +72,13 @@ export const getStaticProps = async ({ params }) => {
       slug
     },
     slug,
-    title
+    title,
+    'allSections': *[_type == 'orderSections'][0]{
+      order[]->{
+        title,
+        'slug': slug.current
+      }
+    }
   }[0]`
   const data = await sanityClient.fetch(query, {
     slug: params.sections
