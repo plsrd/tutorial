@@ -11,7 +11,7 @@ import {
   Module,
   ButtonContainer,
   Button
-} from './style'
+} from '../../styles/section'
 
  
 const Section = ({ data }) => {

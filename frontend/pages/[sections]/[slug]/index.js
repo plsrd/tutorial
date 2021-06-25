@@ -11,7 +11,7 @@ import {
     Title,
     Header,
     Text
-} from './style'
+} from '../../../styles/module'
 
 const Module = ({ data }) => {
   const {

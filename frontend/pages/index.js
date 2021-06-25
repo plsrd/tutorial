@@ -11,7 +11,7 @@ import {
   Description,
   ButtonContainer,
   Button,
-} from './style'
+} from '../styles/home'
 
 const Home = ({ data }) => {
   const { header, description } = data
