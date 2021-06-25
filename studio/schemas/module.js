@@ -68,6 +68,13 @@ export default {
       validation: Rule => Rule.required().min(1)
     },
     {
+      name: 'knowledgeCheck',
+      title: 'Knowledge Check',
+      description: 'Add challenges and hints to check content comprehension here',
+      type: 'array',
+      of: [{ type: 'knowledgeCheckItem' }]
+    },
+    {
       name: 'additionalResources',
       title: 'Additional Resources',
       description: 'Snippets of info with links',
