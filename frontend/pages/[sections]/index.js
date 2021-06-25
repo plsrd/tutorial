@@ -16,6 +16,7 @@ import {
  
 const Section = ({ data }) => {
   const { title, description, slug, modules } = data
+  console.log(title)
   return (
     <Layout current={title}> 
       <Container>
