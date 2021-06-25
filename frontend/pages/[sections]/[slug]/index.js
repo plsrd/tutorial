@@ -5,6 +5,7 @@ import LearningOutcomes from '../../../components/LearningOutcomes/LearningOutco
 import NavButtons from '../../../components/NavButtons/NavButtons'
 import LessonPlan from '../../../components/LessonPlan/LessonPlan'
 import Resources from '../../../components/Resources/Resources'
+import KnowledgeCheck from '../../../components/KnowledgeCheck/KnowledgeCheck'
 
 import {
     Container,
@@ -19,6 +20,7 @@ const Module = ({ data }) => {
     lessonPlan,
     learningOutcomes,
     introduction,
+    knowledgeCheck,
     additionalResources,
     parent
   } = data
@@ -34,10 +36,12 @@ const Module = ({ data }) => {
         <LearningOutcomes outcomes = {learningOutcomes} />
         <LessonPlan lessonPlan={lessonPlan}/>
         {
-          additionalResources ?
+          knowledgeCheck &&
+            <KnowledgeCheck items={knowledgeCheck} />
+        }
+        {
+          additionalResources &&
             <Resources resources={additionalResources} />
-          :
-          null
         }
         <NavButtons 
           parent={parent} 
@@ -55,6 +59,7 @@ export const getServerSideProps = async ({ params }) => {
     lessonPlan,
     learningOutcomes,
     introduction,
+    knowledgeCheck,
     additionalResources,
     'parent': *[_type == 'section' && references(^._id)][0]{
       title,
