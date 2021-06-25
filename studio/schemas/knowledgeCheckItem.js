@@ -6,12 +6,23 @@ export default {
     {
       name: 'challenge',
       title: 'Challenge',
-      type: 'string'
+      type: 'blockContent'
     },
     {
       name: 'hint',
       title: 'Hint',
       type: 'blockContent',
     }
-  ]
+  ],
+  preview: {
+    select: {
+      title: 'challenge'
+    },
+    prepare(selection) {
+      const { title } = selection
+      return {
+        title: title[0].children[0].text
+      }
+    }
+  }
 }
