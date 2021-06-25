@@ -6,7 +6,7 @@ export default {
   fields: [
     {
       name: 'order',
-      title: 'Order',
+      title: 'Master Learning Path Section Order',
       type: 'array',
       of: [
         {
