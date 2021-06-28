@@ -19,6 +19,7 @@ export const Wrapper = styled.div`
     & .title {
       font-size: 1rem;
       color: #2276fc;
+      margin-bottom: .5rem;
     };
     & .icon {
       padding-bottom: .1rem;
