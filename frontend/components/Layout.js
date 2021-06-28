@@ -1,6 +1,11 @@
 import React, { useEffect, useState } from 'react'
 import { sanityClient } from '../sanity'
 
+import {
+  ThemeProvider,
+  studioTheme
+} from '@sanity/ui'
+
 import Sidebar from './Sidebar/Sidebar'
 import Nav from './Nav'
 import Footer from './Footer/Footer'
@@ -30,7 +35,8 @@ const Layout = ({ children, current }) => {
     <>
       <Nav />
       <main> 
-       {current ? 
+        <ThemeProvider theme={studioTheme}>
+        {current ? 
         <Sidebar 
           sections={sections}
           current={current}
@@ -39,6 +45,7 @@ const Layout = ({ children, current }) => {
         null
       }
        {children}
+        </ThemeProvider>
        </ main>
       <Footer />
     </>

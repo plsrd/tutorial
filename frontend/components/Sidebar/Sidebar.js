@@ -7,8 +7,8 @@ const Sidebar = ({ sections, current }) => {
     <Container>
       {sections.map(section => section.title === current ? 
       (
-        <Wrapper current>
-          <Link href={`/${section.slug.current}`} key={section.title}> 
+        <Wrapper current key={section.title}>
+          <Link href={`/${section.slug.current}`}> 
             <a className='title'>{section.title}<FaArrowRight className='icon'/></a>
           </Link>
           {section.modules && section.modules.map(module => (
@@ -20,8 +20,8 @@ const Sidebar = ({ sections, current }) => {
       )
       :
       (
-        <Wrapper>
-          <Link href={`/${section.slug.current}`} key={section.title}> 
+        <Wrapper key={section.title}>
+          <Link href={`/${section.slug.current}`}> 
             <a className='title'>{section.title}</a>
           </Link>
         </Wrapper>

@@ -15,6 +15,7 @@ const config = {
 
 const Gotcha = styled.div`
   background-color: #515e721a;
+  margin: 3rem 0;
 `
 const GotchaHeader = styled.p`
   font-weight: bold;

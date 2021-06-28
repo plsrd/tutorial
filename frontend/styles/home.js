@@ -38,7 +38,7 @@ export const Button  = styled.a`
   font-weight: 300;
   padding: 1rem;
   border-radius: 5px;
-  background-color: ${({start}) => start ? '#1e63d0' : '#fff'};
+  background-color: ${({start}) => start ? '#2276fc' : '#fff'};
   color: ${({start}) => start ? '#fff' : '#515e72'};
   border: ${({start}) => start ? 'none' : '1px solid #cad1dc'};
   cursor: pointer;
