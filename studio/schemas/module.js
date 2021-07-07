@@ -1,4 +1,12 @@
 import { BiCodeBlock } from 'react-icons/bi'
+const sanityClient = require('@sanity/client')
+const client = sanityClient({
+  projectId: '504kkums',
+  dataset: 'production',
+  apiVersion: '2021-06-29', // use current UTC date - see "specifying API version"!
+  token: '', // or leave blank for unauthenticated usage
+  useCdn: true, // `false` if you want to ensure fresh data
+})
 
 export default {
   name: 'module',
@@ -20,6 +28,12 @@ export default {
         source: 'title'
       },
       validation: Rule => Rule.required()
+    },
+    {
+      name: 'parentSection',
+      title: 'Parent Section',
+      type: 'reference',
+      to: {type: 'section'}
     },
     {
       name: 'introduction',
@@ -97,5 +111,27 @@ export default {
         }
       ]
     }
-  ]
+  ],
+  orderings: [
+    {
+      title: 'Section',
+      name: 'sectionAsc',
+      by: [
+        {field: 'parentSection', direction: 'asc'}
+      ]
+    },
+  ],
+  preview: {
+    select: {
+      title: 'title',
+      parent: 'parentSection.title'
+    },
+    prepare({ title, parent }) {
+      
+      return {
+        title: title,
+        subtitle: parent ? parent: ''
+      }
+    }
+  }
 }
