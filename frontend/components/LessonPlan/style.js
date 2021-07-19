@@ -7,10 +7,12 @@ export const Header = styled.h3`
 `
 
 export const Container = styled.div`
-  & p {
+  & p, li, blockquote {
     font-size: 1.2rem;
     line-height: 1.4;
     color: #515e72;
+  };
+  & p {
     margin: 1rem 0;
   };
   & h4 {
@@ -27,5 +29,10 @@ export const Container = styled.div`
     width: 100%;
     border: 1px solid #515e72;
     margin: 1rem 0;
-  }
+  };
+  & blockquote {
+    border-left: 1px solid #515e72;
+    margin: 2rem 1.5rem;
+    padding: 1.5rem;
+  };
 `

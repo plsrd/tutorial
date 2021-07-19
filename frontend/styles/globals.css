@@ -43,7 +43,13 @@ footer {
 
 li {
   list-style: inside;
+  list-style-position: outside;
+  margin: 1rem;
 } 
+
+ul {
+  margin: 2rem 1rem;
+}
 
 code {
   font-family: 'Roboto Mono', monospace;
