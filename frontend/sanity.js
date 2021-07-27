@@ -10,7 +10,7 @@ const config = {
   dataset: "production",
   projectId: '504kkums',
   useCdn: true,
-  apiVersion: '2020-05-20'
+  apiVersion: '2021-05-20'
 }
 
 const Gotcha = styled.div`
